@@ -4,7 +4,7 @@ const modal = () => {
   const modalServices = document.querySelector('.services-modal')
 
   document.addEventListener('click', (e) => {
-    if (e.target.closest('#header')) {
+    if (e.target.matches('#header .button a')) {
       modalHeader.style.display = 'flex'
       overlay.style.display = 'block'
     } else if (e.target.matches('.header-modal__close')) {

@@ -4,9 +4,8 @@ const scrollUp = () => {
   const navigation = document.querySelector('#navigation')
   const offer = document.querySelector('#offer')
 
-  let height = header.offsetHeight + navigation.offsetHeight + offer.offsetHeight
-  let offsetWidth
   smoothScroll.style.cursor = 'pointer'
+  smoothScroll.style.display = 'none'
   smoothScroll.addEventListener('click', (e) => {
     e.preventDefault()
     header.scrollIntoView({
