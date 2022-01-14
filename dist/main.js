@@ -16,17 +16,27 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_one__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/one */ \"./src/modules/one.js\");\n\r\n\r\n(0,_modules_one__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack://middle_diplom/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_scrollUp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollUp */ \"./src/modules/scrollUp.js\");\n\r\n\r\n\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n;(0,_modules_scrollUp__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack://middle_diplom/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/modules/one.js":
-/*!****************************!*\
-  !*** ./src/modules/one.js ***!
-  \****************************/
+/***/ "./src/modules/modal.js":
+/*!******************************!*\
+  !*** ./src/modules/modal.js ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst one = () => {\r\n  console.log(1)\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (one);\n\n//# sourceURL=webpack://middle_diplom/./src/modules/one.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst modal = () => {\r\n  const modalHeader = document.querySelector('.header-modal')\r\n  const overlay = document.querySelector('.overlay')\r\n  const modalServices = document.querySelector('.services-modal')\r\n\r\n  document.addEventListener('click', (e) => {\r\n    if (e.target.closest('#header')) {\r\n      modalHeader.style.display = 'flex'\r\n      overlay.style.display = 'block'\r\n    } else if (e.target.matches('.header-modal__close')) {\r\n      modalHeader.style.display = 'none'\r\n      overlay.style.display = 'none'\r\n    } else if (e.target.matches('.service-button a')) {\r\n      modalServices.style.display = 'flex'\r\n      overlay.style.display = 'block'\r\n    } else if (e.target.matches('.services-modal__close')) {\r\n      modalServices.style.display = 'none'\r\n      overlay.style.display = 'none'\r\n    }\r\n  })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);\n\n//# sourceURL=webpack://middle_diplom/./src/modules/modal.js?");
+
+/***/ }),
+
+/***/ "./src/modules/scrollUp.js":
+/*!*********************************!*\
+  !*** ./src/modules/scrollUp.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scrollUp = () => {\r\n  const smoothScroll = document.querySelector('.smooth-scroll')\r\n  const header = document.querySelector('#header')\r\n  const navigation = document.querySelector('#navigation')\r\n  const offer = document.querySelector('#offer')\r\n\r\n  let height = header.offsetHeight + navigation.offsetHeight + offer.offsetHeight\r\n  let offsetWidth\r\n  smoothScroll.style.cursor = 'pointer'\r\n  smoothScroll.addEventListener('click', (e) => {\r\n    e.preventDefault()\r\n    header.scrollIntoView({\r\n            behavior: 'smooth',\r\n            block: 'start'\r\n            })\r\n  })\r\n\r\n  document.addEventListener('scroll', () => {\r\n    let heightBlock = header.offsetHeight + navigation.offsetHeight + offer.offsetHeight\r\n    let crollY = window.scrollY\r\n    if (crollY < heightBlock) {\r\n      smoothScroll.style.display = 'none'\r\n    } else {\r\n      smoothScroll.style.display = 'flex'\r\n    }\r\n    \r\n  })\r\n\r\n}\r\n\r\n\r\n  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollUp);\n\n//# sourceURL=webpack://middle_diplom/./src/modules/scrollUp.js?");
 
 /***/ })
 

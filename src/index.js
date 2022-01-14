@@ -1,3 +1,5 @@
-import one from './modules/one'
+import modal from './modules/modal'
+import scrollUp from './modules/scrollUp'
 
-one()
+modal()
+scrollUp()
