@@ -16,13 +16,12 @@ const scrollUp = () => {
 
   document.addEventListener('scroll', () => {
     let heightBlock = header.offsetHeight + navigation.offsetHeight + offer.offsetHeight
-    let crollY = window.scrollY
-    if (crollY < heightBlock) {
+    let scrollY = window.scrollY
+    if (scrollY < heightBlock) {
       smoothScroll.style.display = 'none'
     } else {
       smoothScroll.style.display = 'flex'
     }
-    
   })
 
 }

@@ -22,6 +22,10 @@ const modal = () => {
     } else if (e.target.matches('.services-modal__close')) {
       modalServices.style.display = 'none'
       overlay.style.display = 'none'
+    }  else if (e.target.matches('.overlay')) {
+      modalHeader.style.display = 'none'
+      modalServices.style.display = 'none'
+      overlay.style.display = 'none'
     }
   })
 }
