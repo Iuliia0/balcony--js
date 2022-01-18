@@ -25,6 +25,7 @@ const modal = () => {
     }  else if (e.target.matches('.overlay')) {
       modalHeader.style.display = 'none'
       modalServices.style.display = 'none'
+      document.querySelector('.modal-img').style.display = 'none'
       overlay.style.display = 'none'
     }
   })
