@@ -52,9 +52,10 @@ const slider = () => {
       elems[index].style.display = 'block'
       index++
       elems[index].style.display = 'block'
+      index--
     } else if (offsetWidth < 576) {
       elems[index].style.display = 'block'
-      index--
+      index++
     }
   }
   
@@ -69,15 +70,20 @@ const slider = () => {
       currentSlide++
     }
 
-    if (currentSlide >= arrItems.length-1) {
-      currentSlide = 0
-    }
-
     if (offsetWidth > 576) {
+      if (currentSlide >= arrItems.length-1) {
+        currentSlide = 0
+      }
+
       if (currentSlide < 0) {
         currentSlide = arrItems.length-2
       }
     } else if (offsetWidth < 576) {
+
+      if (currentSlide > arrItems.length-1) {
+        currentSlide = 0
+      }
+
       if (currentSlide < 0) {
         currentSlide = arrItems.length-1
       }
