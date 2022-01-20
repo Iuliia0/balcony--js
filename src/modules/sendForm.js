@@ -7,7 +7,7 @@ let forms = document.querySelectorAll('form')
       let success = true
 
       for (let item of list) {
-        if (item.value === '') {
+        if (item.value === '' && item.type !== 'hidden') {
           success = false
         }
       }

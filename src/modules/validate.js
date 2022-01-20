@@ -5,26 +5,22 @@ const validate = () => {
   
 
   const regText = /[\d\=\+\)\(\*\?\:\;\%\$\&\#\№\^\_\@\'\"\<\>\,\.\!\~\`\-]+/gi
-  const regTel =  /[a-zа-я\=\)\(\*\?\:\;\%\$\&\#\№\^\_\@\'\"\<\>\,\.\!\~\`\-]/g
+  const regTel =  /[a-zа-я\=\)\(\*\?\:\;\%\$\&\#\№\^\_\@\'\"\<\>\,\.\!\~\`\-]/gi
 
   phones.forEach(phone => {
     phone.maxLength = 16
   })
 
   const getText = (arr, reg) => {
-    
     arr.forEach(item => {
       item.addEventListener('input', (e) => {
         e.target.value = e.target.value.replace(reg, '')
       })
     })
-
   }
 
   getText(names, regText)
   getText(phones, regTel)
-
-
 }
 
 export default validate

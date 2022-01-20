@@ -26,7 +26,10 @@ const modal = () => {
       modalHeader.style.display = 'none'
       modalServices.style.display = 'none'
       overlay.style.display = 'none'
-      document.querySelector('.modal-img').style.display = 'none'
+      if (document.querySelector('.modal-img')) {
+        document.querySelector('.modal-img').style.display = 'none'
+      }
+      
     }
   })
 }
