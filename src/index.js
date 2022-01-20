@@ -7,6 +7,7 @@ import timer from './modules/timer'
 import sendForm from './modules/sendForm'
 import calc from './modules/calc'
 import comments from './modules/comments'
+import validate from './modules/validate'
 
 modal()
 scrollUp()
@@ -24,3 +25,4 @@ sendForm({
 })
 calc()
 comments()
+validate()
