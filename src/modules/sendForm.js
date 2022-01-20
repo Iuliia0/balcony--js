@@ -1,4 +1,4 @@
-const sendForm = () => {
+const sendForm = ({someElem = []}) => {
 let forms = document.querySelectorAll('form')
   forms.forEach((form) => {
     // валидация формы
@@ -70,6 +70,14 @@ let forms = document.querySelectorAll('form')
 
       formData.forEach((val, key) => {
         formBody[key] = val
+      })
+
+      someElem.forEach(elem => {
+        const element = document.getElementById(elem.id)
+        if (+element.value > 0) {
+            console.log(1)
+            formBody[elem.id] = element.value
+        }
       })
 
         if (validate(formElements)) {

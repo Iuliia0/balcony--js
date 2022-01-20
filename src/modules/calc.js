@@ -10,7 +10,6 @@ const calc = () => {
     const calcMaterialValue = +calcMaterial.options[calcMaterial.selectedIndex].value
     const calcSquareValue = calcSquare.value
 
-
     let totalValue = 0
 
     if (calcSquare.value > 0) {
@@ -26,7 +25,6 @@ const calc = () => {
     calcSquare.value = calcSquare.value.replace(/\D/g, '')
     countCalc()
   })
-
 }
 
 export default calc

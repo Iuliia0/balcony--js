@@ -13,5 +13,12 @@ slider()
 sliderBenefits()
 modalImg()
 timer('30 januar 2022')
-sendForm()
+sendForm({
+  someElem: [
+    {
+      type: 'block',
+      id: 'calc-total'
+    }
+  ]
+})
 calc()
