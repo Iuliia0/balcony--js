@@ -10,6 +10,10 @@ let forms = document.querySelectorAll('form')
         if (item.value === '' && item.type !== 'hidden') {
           success = false
         }
+        if (item.name === 'fio' && item.value.length < 2 || 
+            item.name === 'phone' && item.value.length < 5) {
+          success = false
+        }
       }
 
       return success
