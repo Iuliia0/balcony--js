@@ -1,7 +1,6 @@
 const timer = (deadline) => {
   const orders = document.querySelectorAll('.order')
   orders.forEach(order => {
-
     const timerDays = order.querySelector('.count_1 span')
     const timerHours = order.querySelector('.count_2 span')
     const timerMinutes = order.querySelector('.count_3 span')

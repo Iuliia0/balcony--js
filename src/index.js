@@ -14,7 +14,7 @@ scrollUp()
 slider()
 sliderBenefits()
 modalImg()
-timer('30 januar 2022')
+timer('15 april 2022')
 sendForm({
   someElem: [
     {
